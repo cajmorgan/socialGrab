@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import InstagramWrapper from './media-wrappers/InstagramWrapper.js';
 import TwitterWrapper from './media-wrappers/TwitterWrapper.js';
+import './MediaWrapper.css';
 
 async function fetchData(searchValue) {
   const sendData = { instagram: searchValue, twitter: searchValue };

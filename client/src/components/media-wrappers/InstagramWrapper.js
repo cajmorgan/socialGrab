@@ -1,5 +1,6 @@
 import React from 'react';
 import Picture from './parts/Picture.js'
+import './InstagramWrapper.css';
 
 function generateGallery(galleryArray) {
   const gallery = [];

@@ -10,12 +10,12 @@ font-family: 'Roboto', sans-serif; */
 
 .header {
   height: 250px;
-  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 .header__title {
   font-size: 120px;
-  background: -webkit-linear-gradient(#405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  background: -webkit-linear-gradient( #aba7ff, #d79bff, #e984e4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Pacifico', cursive;

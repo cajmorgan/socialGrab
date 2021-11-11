@@ -1,0 +1,30 @@
+.instagram-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.instagram-wrapper__header {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__profile-pic {
+  margin: 20px;
+  
+}
+
+.header__bio-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 520px;
+}
+
+.bio-wrapper__user-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.bio-wrapper__user-info > h3 {
+  flex-grow: 0.2;
+}

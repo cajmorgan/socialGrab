@@ -38,13 +38,13 @@
   border-radius: 10px;
   color: white;
   border: none;
-  background: -webkit-linear-gradient( #aba7ff, #d79bff);
+  background: -webkit-linear-gradient( #bfbbff, #e0b2ff);
   cursor: pointer;
   box-shadow: 1px 1px 5px 1px rgba(75, 75, 75, 0.4);
 }
 
 .input-wrapper__submit:hover {
-  background: -webkit-linear-gradient( #9791ff, #d79bff);
+  background: -webkit-linear-gradient( #aeacff, #d79bff);
 }
 
 .input-wrapper__at {
