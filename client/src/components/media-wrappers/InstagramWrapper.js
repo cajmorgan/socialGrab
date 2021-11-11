@@ -1,7 +1,16 @@
 import React from 'react';
+import Picture from './parts/Picture.js'
+
+function generateGallery(galleryArray) {
+  const gallery = [];
+  galleryArray.forEach((pic, index) => {
+    gallery.push(<Picture url={pic} key={index} />)
+  })
+  
+  return gallery;
+}
 
 function InstagramWrapper({ data }) {
-  
   return (
     <article className="instagram-wrapper">
       <header className="instagram-wrapper__header">
@@ -19,10 +28,10 @@ function InstagramWrapper({ data }) {
             <article>{data.bio.info}</article>
           </div>
         </div>
-      <section>
-
-      </section>
       </header>
+      <section className="instagram-wrapper__gallery">
+      {generateGallery(data.gallery)}
+      </section>
     </article>
   )
 }

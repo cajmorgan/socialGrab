@@ -18,9 +18,7 @@ function createPic(url, urlToPic) {
     createPhoto.on('finish', () => {
       resolve(true);
     })
-
   })
-  
 }
 
 async function handleFiles(req, res, next) {
@@ -36,7 +34,13 @@ async function handleFiles(req, res, next) {
       await createPic(req.results.ig.gallery[i], urlToPic);
       req.results.ig.gallery[i] = `http://localhost:9000/data/${generateRandomName}.jpg`;
     }
+  }
 
+  if (req.results.twitter) {
+    const generateRandomName = getName();
+    const urlToPic = `./client/build/data/${generateRandomName}.jpg`
+    await createPic(req.results.twitter.profilePic, urlToPic);
+    req.results.twitter.profilePic = `http://localhost:9000/data/${generateRandomName}.jpg`;
   }
 
   next();

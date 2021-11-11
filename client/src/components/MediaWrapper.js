@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import InstagramWrapper from './media-wrappers/InstagramWrapper.js';
+import TwitterWrapper from './media-wrappers/TwitterWrapper.js';
 
 async function fetchData(searchValue) {
   const sendData = { instagram: searchValue, twitter: searchValue };
@@ -30,13 +31,10 @@ function MediaWrapper({ searchValue }) {
   }, [])
 
   return (
-   <section>
-     <h1>HIHO</h1>
+   <section className="media-wrapper">
      { isSearching && <p>Searching...</p> }
-     <article className="instagram-result"></article>
-     { data.ig && !isSearching && < InstagramWrapper data={data.ig} />}  
-     <article className="twitter-result"></article>
-     {/* { data.twitter } */}
+     { data.ig && !isSearching && <InstagramWrapper data={data.ig} />}  
+     { data.twitter && !isSearching && <TwitterWrapper data={data.twitter} /> }
    </section>
   )
 }
