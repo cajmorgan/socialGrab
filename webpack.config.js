@@ -6,6 +6,10 @@ export default {
   module: {
     rules: [
       {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
@@ -14,7 +18,7 @@ export default {
             presets: ['@babel/preset-env']
           }
         }
-      }
+      },
     ]
   },
   devServer: {

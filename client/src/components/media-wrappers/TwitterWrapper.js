@@ -18,13 +18,11 @@ function TwitterWrapper({ data }) {
           <img src={data.profilePic} />
         </div>
         <div className="header__bio-wrapper">
-          <div className="bio-wrapper">
-            <h2 className="bio-wrapper__name">@{data.bio.name}</h2>
-            <div className="bio-wrapper__user-info">
-              <h3>{data.bio.tweetsNumber}</h3>
-              <h3>{data.bio.followers}</h3>
-              <h3>{data.bio.following}</h3>
-            </div>
+          <h2 className="bio-wrapper__name">@{data.bio.name}</h2>
+          <div className="bio-wrapper__user-info">
+            <h3>{data.bio.tweetsNumber}</h3>
+            <h3>{data.bio.followers}</h3>
+            <h3>{data.bio.following}</h3>
           </div>
         </div>
       </header>
