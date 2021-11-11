@@ -1,3 +1,4 @@
+import { create } from 'domain';
 import fs from 'fs';
 import { get } from 'https'
 
@@ -28,6 +29,14 @@ async function handleFiles(req, res, next) {
     const urlToPic = `./client/build/data/${generateRandomName}.jpg`
     await createPic(req.results.ig.profilePic, urlToPic);
     req.results.ig.profilePic = `http://localhost:9000/data/${generateRandomName}.jpg`;
+
+    for (let i = 0; i < req.results.ig.gallery.length; i++) {
+      const generateRandomName = getName();
+      const urlToPic = `./client/build/data/${generateRandomName}.jpg`
+      await createPic(req.results.ig.gallery[i], urlToPic);
+      req.results.ig.gallery[i] = `http://localhost:9000/data/${generateRandomName}.jpg`;
+    }
+
   }
 
   next();

@@ -19,7 +19,9 @@ function InstagramWrapper({ data }) {
             <article>{data.bio.info}</article>
           </div>
         </div>
+      <section>
 
+      </section>
       </header>
     </article>
   )
