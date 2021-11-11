@@ -14,7 +14,8 @@ function Tweet({ tweet, profilePic }) {
           <span className="top__date">{tweet.date}</span>
         </div>
         <div className="info-wraper__bottom">
-          <div className="bottom__description">{tweet.tweet}</div>
+          <div className="bottom__description" id="bottom-id">
+            <p>{tweet.tweet}</p></div>
           <div className="bottom__actions">
             <p className="actions__likes">{tweet.likes}</p>
             <p className="actions__comments">{tweet.comments}</p>

@@ -29,7 +29,7 @@ function MediaWrapper({ searchValue }) {
       setData(responseData);
       console.log(responseData);
     
-  }, [])
+  }, [searchValue])
 
   return (
    <section className="media-wrapper">

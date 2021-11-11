@@ -57,22 +57,25 @@
 
 .top__name {
   font-size: 12px;
-  flex-grow: 0.2;
+  margin: 5px;
 }
 
 .top__retweet {
   font-size: 12px;
-  flex-grow: 0.2;
+  margin: 5px;
+
 }
 
 .top__username {
   font-size: 9px;
-  flex-grow: 0.2
+  margin: 5px;
+
 }
 
 .top__date {
   font-size: 9px;
-  flex-grow: 0.2
+  margin: 5px;
+
 }
 
 .info-wraper__bottom {
@@ -82,14 +85,30 @@
 
 .bottom__description {
   font-size: 15px;
-  margin: 10px 0 10px 0;
+  margin: 5px;
   height: 50px;
 }
 
 .bottom__actions {
-  display: flex
+  display: flex;
+  margin: 5px;
 }
 
-.bottom__actions > p {
-  flex-grow: 0.2;
+#bottom-id {
+  display: flex;
+  font-size: 15px;
+  margin: 5px;
 }
+
+.actions__likes {
+  margin: 0 20px 0 0
+}
+
+.actions__comments {
+  margin: 0 20px 0 0
+}
+
+.actions__retweets {
+  margin: 0 20px 0 0
+}
+
