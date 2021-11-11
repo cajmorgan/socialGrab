@@ -12,7 +12,7 @@ async function scrape(req, res, next) {
 
   try {
     scraper = new Scraper(true);
-    const browser = await scraper.launch({ headless: false, userDataDir: './data' });
+    const browser = await scraper.launch({ headless: true, userDataDir: './data' });
 
     if (body.instagram) {
       const igObj = {};

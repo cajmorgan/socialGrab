@@ -21,7 +21,7 @@
     "webpack-dev-server": "^4.4.0"
   },
   "scripts": {
-    "start": "nodemon ./server/server.js webpack --watch",
+    "start": "nodemon ./server/server.js & webpack --watch",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

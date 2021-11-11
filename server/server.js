@@ -2,7 +2,6 @@ import express from 'express';
 import scrape from './handlers/scrape.js';
 import { __dirname } from '../dirname.js'
 
-
 const app = express();
 app.use(express.static('client/build'));
 app.use(express.json());
