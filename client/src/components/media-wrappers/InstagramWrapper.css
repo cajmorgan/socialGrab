@@ -1,16 +1,28 @@
 .instagram-wrapper {
   display: flex;
   flex-direction: column;
+  width: 40%;
+  margin-right: 10px;
 }
 
 .instagram-wrapper__header {
   display: flex;
   flex-direction: row;
+  background: -webkit-linear-gradient( #d5d3ff, #e6c5ff, #f7acf3);
+  color: white;
+  text-shadow: 1px 1px 6px #00000054;
+  border-radius: 10px 10px 0 0;
+  height: 180px;
 }
 
 .header__profile-pic {
   margin: 20px;
   
+}
+
+.header__profile-pic > img {
+  border-radius: 50%;
+  box-shadow: 1px 1px 8px #000000
 }
 
 .header__bio-wrapper {
@@ -27,4 +39,15 @@
 
 .bio-wrapper__user-info > h3 {
   flex-grow: 0.2;
+}
+
+.instagram-wrapper__gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.gallery__picture {
+  width: 50%;
 }

@@ -1,0 +1,95 @@
+
+.twitter-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-left: 10px;
+
+}
+
+.twitter-wrapper__header {
+  display: flex;
+  flex-direction: row;
+  background: -webkit-linear-gradient( #d5d3ff, #e6c5ff, #f7acf3);
+  color: white;
+  text-shadow: 1px 1px 6px #00000054;
+  border-radius: 10px 10px 0 0;
+  height: 180px;
+}
+
+.twitter-wrapper__tweets {
+  color: white;
+  background: -webkit-linear-gradient( #5b5977, #53455e, #573c55);
+  text-shadow: 1px 1px 5px #00000082;
+}
+
+.tweets__tweet {
+  display: flex;
+  flex-direction: row; 
+  padding: 10px;
+}
+
+.tweets__tweet:nth-child(2) {
+  border-top: 1px solid rgb(26, 26, 26);
+  border-bottom: 1px solid rgb(26, 26, 26);
+}
+
+
+.tweet_picture > img {
+  border-radius: 50%;
+  max-width: 100px;
+}
+
+.tweet_info-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-wraper__top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.top__name {
+  font-size: 12px;
+  flex-grow: 0.2;
+}
+
+.top__retweet {
+  font-size: 12px;
+  flex-grow: 0.2;
+}
+
+.top__username {
+  font-size: 9px;
+  flex-grow: 0.2
+}
+
+.top__date {
+  font-size: 9px;
+  flex-grow: 0.2
+}
+
+.info-wraper__bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom__description {
+  font-size: 15px;
+  margin: 10px 0 10px 0;
+  height: 50px;
+}
+
+.bottom__actions {
+  display: flex
+}
+
+.bottom__actions > p {
+  flex-grow: 0.2;
+}

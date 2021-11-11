@@ -1,5 +1,6 @@
 import React from 'react';
 import Tweet from './parts/Tweet.js'
+import './TwitterWrapper.css';
 
 function generateTweets(tweetsArray, profilePic) {
   const tweets = [];
