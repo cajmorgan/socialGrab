@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Form from './components/Form.js'
 import MediaWrapper from './components/MediaWrapper.js';
-import css from './App.css'
+import './reset.css'
+import './App.css'
 
 function App() {
   const [searchValue, setSearchValue] = useState();
@@ -9,7 +10,9 @@ function App() {
 
   return (
     <main className="App">
-      <h1>SocialGrab</h1>
+      <header className="header">
+      <h1 className="header__title">SocialGrab</h1>
+      </header>
       <Form setSearchValue={setSearchValue}/>
       { searchValue && <MediaWrapper searchValue={searchValue} />}
     </main>
