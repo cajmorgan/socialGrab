@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Form from './components/Form.js'
-import MediaWrapper from './components/media-wrappers/MediaWrapper.js';
+import MediaWrapper from './components/MediaWrapper.js';
 
 function App() {
   const [searchValue, setSearchValue] = useState();
+  // const [showForm, setShowForm] = useState(true);
 
   return (
     <main>
