@@ -3,3 +3,4 @@ main.js
 .DS_Store
 data
 login.js
+client/build/data

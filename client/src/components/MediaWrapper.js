@@ -34,7 +34,7 @@ function MediaWrapper({ searchValue }) {
      <h1>HIHO</h1>
      { isSearching && <p>Searching...</p> }
      <article className="instagram-result"></article>
-     { data.instagram && !isSearching && < InstagramWrapper data={data.instagram} />}  
+     { data.ig && !isSearching && < InstagramWrapper data={data.ig} />}  
      <article className="twitter-result"></article>
      {/* { data.twitter } */}
    </section>

@@ -1,12 +1,13 @@
 import express from 'express';
 import scrape from './handlers/scrape.js';
+import handleFiles from './handlers/handleFiles.js';
 import { __dirname } from '../dirname.js'
 
 const app = express();
 app.use(express.static('client/build'));
 app.use(express.json());
 
-app.post('/scrape', scrape, (req, res) => {
+app.post('/scrape', scrape, handleFiles, (req, res) => {
   res.send(req.results);
 })
 
