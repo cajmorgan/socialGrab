@@ -33,9 +33,10 @@ function MediaWrapper({ searchValue }) {
 
   return (
    <section className="media-wrapper">
-     { isSearching && <p>Searching...</p> }
+     { isSearching && <div className="loader-wrapper"><div className="loader"></div></div>}
      { data.ig && !isSearching && <InstagramWrapper data={data.ig} />}  
      { data.twitter && !isSearching && <TwitterWrapper data={data.twitter} /> }
+     { data.message && <p className="error-message">😭😭😭 {data.message} 😭😭😭</p>}
    </section>
   )
 }
