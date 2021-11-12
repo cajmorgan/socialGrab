@@ -22,17 +22,20 @@ function createPic(url, urlToPic) {
 }
 
 async function handleFiles(req, res, next) {
+  const filesToDestroy = [];
   if (req.results.ig) {
     const generateRandomName = getName();
     const urlToPic = `./client/build/data/${generateRandomName}.jpg`
     await createPic(req.results.ig.profilePic, urlToPic);
     req.results.ig.profilePic = `http://localhost:9000/data/${generateRandomName}.jpg`;
+    filesToDestroy.push(urlToPic)
 
     for (let i = 0; i < req.results.ig.gallery.length; i++) {
       const generateRandomName = getName();
       const urlToPic = `./client/build/data/${generateRandomName}.jpg`
       await createPic(req.results.ig.gallery[i], urlToPic);
       req.results.ig.gallery[i] = `http://localhost:9000/data/${generateRandomName}.jpg`;
+      filesToDestroy.push(urlToPic)
     }
   }
 
@@ -41,7 +44,16 @@ async function handleFiles(req, res, next) {
     const urlToPic = `./client/build/data/${generateRandomName}.jpg`
     await createPic(req.results.twitter.profilePic, urlToPic);
     req.results.twitter.profilePic = `http://localhost:9000/data/${generateRandomName}.jpg`;
+    filesToDestroy.push(urlToPic)
   }
+
+  setTimeout(() => {
+    filesToDestroy.forEach(file => {
+      fs.unlink(file, () => {
+        console.log('files deleted');
+      });
+    })
+  }, 3000)
 
   next();
 }

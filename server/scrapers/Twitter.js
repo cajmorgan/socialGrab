@@ -52,7 +52,7 @@ class Twitter extends Scraper {
         return text.innerText;
     })
 
-    if (response && response.match(/this.account.+exist/gi)) {
+    if (response && response.match(/this.account.+exist|account suspended/gi)) {
       const err = new Error('Twitter user not found!');
       err.notFound = true;
       throw err

@@ -58,9 +58,6 @@ class Instagram extends Scraper {
     }
 
   }
-
-  
-
 }
 
 export default Instagram
