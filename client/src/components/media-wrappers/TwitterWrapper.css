@@ -71,6 +71,15 @@
   font-weight: 300;
 }
 
+.bio-wrapper__user-info {
+  font-size: 16px;
+}
+
+.bio-wrapper__user-info > h3 > p {
+  font-size: 13px;
+  font-weight: 300;
+}
+
 .top__name {
   font-size: 15px;
   margin: 5px;

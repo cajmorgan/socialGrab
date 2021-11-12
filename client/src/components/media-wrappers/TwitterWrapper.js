@@ -21,9 +21,9 @@ function TwitterWrapper({ data }) {
         <div className="header__bio-wrapper">
           <h2 className="bio-wrapper__name">{data.bio.name} <span>{data.tweets[0].username}</span></h2>
           <div className="bio-wrapper__user-info">
-            <h3>{data.bio.tweetsNumber}</h3>
-            <h3>{data.bio.followers}</h3>
-            <h3>{data.bio.following}</h3>
+            <h3>{data.bio.tweetsNumber.replace('Tweets', '')}<p>Tweets</p></h3>
+            <h3>{data.bio.followers.replace('Followers', '')}<p>Followers</p></h3>
+            <h3>{data.bio.following.replace('Following', '')}<p>Following</p></h3>
           </div>
         </div>
       </header>
