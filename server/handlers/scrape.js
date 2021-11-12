@@ -12,7 +12,7 @@ async function scrape(req, res, next) {
 
   try {
     scraper = new Scraper(true);
-    const browser = await scraper.launch({ headless: true, userDataDir: './data' });
+    const browser = await scraper.launch({ headless: false, userDataDir: './data' });
 
     if (body.instagram) {
       const igObj = {};
@@ -41,14 +41,15 @@ async function scrape(req, res, next) {
     }
     
     req.results = resultsObj; 
-    scraper.closeBrowser();
+    await scraper.closeBrowser();
     next();
 
   } catch (err) {
+    console.log(err.message);
     if (err.notFound)
       err.status = 404;
     
-    scraper.closeBrowser();
+    await scraper.closeBrowser();
     return next(err);
   }
   
