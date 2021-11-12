@@ -21,6 +21,7 @@ function createPic(url, urlToPic) {
   })
 }
 
+/** Refactor this code and put in a function with args */
 async function handleFiles(req, res, next) {
   const filesToDestroy = [];
   if (req.results.ig) {
